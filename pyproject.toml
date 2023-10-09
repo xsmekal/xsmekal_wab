@@ -1,0 +1,12 @@
+[project]
+name = "Hello_Service"
+version = "1.0.0"
+description = "Simple hello-world service"
+authors = [
+    {name = "xsmekal",email = "xsmekal@mendelu.cz"},
+]
+dependencies = []
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
