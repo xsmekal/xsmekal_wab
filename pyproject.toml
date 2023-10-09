@@ -5,8 +5,22 @@ description = "Simple hello-world service"
 authors = [
     {name = "xsmekal",email = "xsmekal@mendelu.cz"},
 ]
-dependencies = []
+dependencies = [
+    "fastapi>=0.103.2",
+    "unicorn[standard]>=2.0.1.post1",
+    "uvicorn[standard]>=0.23.2",
+]
 requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
 
+## konfiguracni blok pro scripty
+[tool.pdm.scripts]
+start = "uvicorn main:app --reload"
+test = "pytest"
+
+## skupina dev dependecies .. pro vyvoj 
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=7.4.2",
+]
